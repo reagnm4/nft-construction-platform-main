@@ -43,7 +43,7 @@ export default async function BuilderProfile({
 }) {
   const { id } = await params;
   
-  const builder = builders.find((b) => b.id === params.id);
+  const builder = builders.find((b) => b.id === id);
 
   if (!builder) {
     notFound(); // Show a 404 page if the builder is not found
