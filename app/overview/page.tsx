@@ -55,12 +55,12 @@ export default function Overview() {
             Whether you&apos;re building your track record or ready to develop at the next level, the network is a gateway to efficient, collaborative funding.
           </p>
           <div className="mt-6 space-x-4">
-            <a href="/builders" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-700">
+            <Link href="/builders" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-700">
               View Network Participants
-            </a>
-            <a href="/investors" className="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-900">
+            </Link>
+            <Link href="/investors" className="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-900">
               Submit Project Proposal
-            </a>
+            </Link>
           </div>
         </section>
       </div>
