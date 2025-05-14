@@ -40,7 +40,7 @@ const builders: Builder[] = [
   },
 ];
 
-export default function BuilderProfile({ params }: PageProps) {
+export default async function BuilderProfile({ params }: PageProps) {
   const builder = builders.find((b) => b.id === params.id);
 
   if (!builder) {
