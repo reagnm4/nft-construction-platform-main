@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100">
@@ -8,9 +10,9 @@ export default function Home() {
           Building a network of real estate developers, contractors, and investors to organize group funding rounds for PE funds and UHNWI.
         </p>
         <div className="mt-6 space-x-4">
-          <a href="/builders" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-200">
+          <Link href="/builders" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-200">
             Join the Network
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -37,9 +39,9 @@ export default function Home() {
       <section className="bg-gray-900 text-white text-center py-20">
         <h2 className="text-3xl font-bold">Get Involved Today</h2>
         <p className="text-lg mt-2 mb-6">Apply to join the network & participate in our first collaborative funding round.</p>
-        <a href="/signup" className="bg-blue-500 px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-700">
+        <Link href="/signup" className="bg-blue-500 px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-700">
           Apply Now
-        </a>
+        </Link>
       </section>
     </div>
   );
