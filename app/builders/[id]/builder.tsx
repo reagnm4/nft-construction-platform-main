@@ -39,8 +39,10 @@ const builders: Builder[] = [
 export default async function BuilderProfile({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
+  const { id } = await params;
+  
   const builder = builders.find((b) => b.id === params.id);
 
   if (!builder) {
