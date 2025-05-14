@@ -9,6 +9,12 @@ interface Builder {
   portfolio: string[];
 }
 
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
+
 const builders: Builder[] = [
   {
     id: "1",
@@ -34,7 +40,7 @@ const builders: Builder[] = [
   },
 ];
 
-export default function BuilderProfile({ params }: { params: { id: string } }) {
+export default function BuilderProfile({ params }: PageProps) {
   const builder = builders.find((b) => b.id === params.id);
 
   if (!builder) {
