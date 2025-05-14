@@ -9,12 +9,6 @@ interface Builder {
   portfolio: string[];
 }
 
-type PageProps = {
-  params: {
-    id: string;
-  };
-};
-
 export const dynamicParams = true;
 
 const builders: Builder[] = [
@@ -42,7 +36,11 @@ const builders: Builder[] = [
   },
 ];
 
-export default async function BuilderProfile({ params }: PageProps) {
+export default async function BuilderProfile({
+  params,
+}: {
+  params: { id: string };
+}) {
   const builder = builders.find((b) => b.id === params.id);
 
   if (!builder) {
@@ -51,17 +49,17 @@ export default async function BuilderProfile({ params }: PageProps) {
 
   return (
     <div className="p-8">
-      <h1 className="text-3xl font-bold text-gray-800 mb-4">{builder?.name}</h1>
+      <h1 className="text-3xl font-bold text-gray-800 mb-4">{builder.name}</h1>
       <p className="text-gray-600 mb-4">
-        <strong>Expertise:</strong> {builder?.expertise}
+        <strong>Expertise:</strong> {builder.expertise}
       </p>
       <p className="text-gray-600 mb-4">
-        <strong>Projects Completed:</strong> {builder?.projects}
+        <strong>Projects Completed:</strong> {builder.projects}
       </p>
-      <p className="text-gray-600 mb-8">{builder?.bio}</p>
+      <p className="text-gray-600 mb-8">{builder.bio}</p>
       <h2 className="text-2xl font-semibold text-gray-800 mb-4">Portfolio</h2>
       <div className="grid grid-cols-2 gap-4">
-        {builder?.portfolio.map((image, index) => (
+        {builder.portfolio.map((image, index) => (
           <img
             key={index}
             src={image}
