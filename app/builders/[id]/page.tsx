@@ -15,6 +15,8 @@ type PageProps = {
   };
 };
 
+export const dynamicParams = true;
+
 const builders: Builder[] = [
   {
     id: "1",
