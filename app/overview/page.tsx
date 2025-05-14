@@ -51,7 +51,7 @@ export default function Overview() {
         <section className="text-center mt-12">
           <h2 className="text-3xl font-bold text-gray-800">Join the Movement</h2>
           <p className="text-lg text-gray-700 mt-2">
-            Whether you're building your track record or ready to develop at the next level, the network is a gateway to efficient, collaborative funding.
+            Whether you&apos;re building your track record or ready to develop at the next level, the network is a gateway to efficient, collaborative funding.
           </p>
           <div className="mt-6 space-x-4">
             <a href="/builders" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-700">
