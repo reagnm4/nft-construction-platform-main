@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function Overview() {
     return (
       <div className="min-h-screen bg-gray-100 py-12 px-6">
